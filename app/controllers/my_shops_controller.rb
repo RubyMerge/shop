@@ -1,4 +1,15 @@
 class MyShopsController < InheritedResources::Base
+ def index
+ end
+
+ def contacts
+ end
+
+ def payment_delivery
+ end
+
+ def order_goods
+ end
 
   private
 
