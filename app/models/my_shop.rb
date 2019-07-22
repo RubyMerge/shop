@@ -1,0 +1,2 @@
+class MyShop < ApplicationRecord
+end

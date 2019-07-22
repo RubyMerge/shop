@@ -1,0 +1,2 @@
+module MyShopsHelper
+end
