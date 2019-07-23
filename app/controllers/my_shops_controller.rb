@@ -1,5 +1,6 @@
 class MyShopsController < InheritedResources::Base
  def index
+   @index =  MyShop.find_by_page_name('index')
  end
 
  def contacts
