@@ -16,3 +16,18 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+nav {
+  background: #feefae;
+}
+
+nav li a {
+  color: black;
+}
+
+nav li a:hover {
+  color: #5f6dba;
+}
+
+.shop_logo {
+  width: 205px;
+}
