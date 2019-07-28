@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.privatbank.ua/p24api/pubinfo?coursid=5&exchange&json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 28 Jul 2019 17:17:14 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"ccy":"USD","base_ccy":"UAH","buy":"25.35000","sale":"25.75000"},{"ccy":"EUR","base_ccy":"UAH","buy":"28.10000","sale":"28.75000"},{"ccy":"RUR","base_ccy":"UAH","buy":"0.36800","sale":"0.40800"},{"ccy":"BTC","base_ccy":"USD","buy":"9046.5666","sale":"9998.8368"}]'
+    http_version: 
+  recorded_at: Sun, 28 Jul 2019 17:17:14 GMT
+recorded_with: VCR 4.0.0
