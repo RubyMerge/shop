@@ -16,16 +16,19 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+$shop-dark-blue: #0C0FBA;
+$shop-header-color: #feefae;
+
 nav {
-  background: #feefae;
-}
+  background: $shop-header-color;
 
-nav li a {
-  color: black;
-}
+    a {
+    color: black;
 
-nav li a:hover {
-  color: #5f6dba;
+    &:hover {
+      color: $shop-dark-blue;
+    }
+  }
 }
 
 .shop_logo {
@@ -33,5 +36,12 @@ nav li a:hover {
 }
 
 .shop_ex {
+  background: $shop-header-color;
   color: darkred;
+  text-align: end;
+
+}
+
+.active a {
+  color: $shop-dark-blue;
 }

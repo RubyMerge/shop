@@ -1,7 +1,7 @@
 class MyShopsController < InheritedResources::Base
 
   def index
-    @exchange_rates = get_exchange_rates
+    $exchange_rates = get_exchange_rates
     @data =  MyShop.find_by_page_name('main')
   end
   def contacts
