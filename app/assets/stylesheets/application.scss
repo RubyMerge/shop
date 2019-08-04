@@ -15,6 +15,7 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "orders";
 
 $shop-dark-blue: #0C0FBA;
 $shop-header-color: #feefae;
@@ -22,26 +23,39 @@ $shop-header-color: #feefae;
 nav {
   background: $shop-header-color;
 
-    a {
-    color: black;
+  a {
+    color: green;
+    font-size: 16px;
+    font-weight: bold;
 
     &:hover {
       color: $shop-dark-blue;
     }
   }
-}
 
-.shop_logo {
-  width: 205px;
+  .active a {
+    color: $shop-dark-blue;
+  }
+
+  .shop_logo {
+    width: 205px;
+  }
 }
 
 .shop_ex {
   background: $shop-header-color;
   color: darkred;
   text-align: end;
-
+  padding-right: 2%;
 }
 
-.active a {
-  color: $shop-dark-blue;
+img {
+  width: 50%;
 }
+
+form {
+  width: 100%;
+}
+
+
+

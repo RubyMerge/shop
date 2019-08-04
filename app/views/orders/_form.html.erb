@@ -1,0 +1,57 @@
+<%= form_with(model: order, local: true) do |form| %>
+
+<div class="container justify-content-center">
+  <div class="field row">
+    <%= form.label :count, class: 'col-2' %>
+    <%= form.number_field :count, type: 'number', class: 'col', value: 1, id: 'count-order'  %>
+  </div>
+
+  <div class="field row">
+    <%= form.label :name, class: 'col-2' %>
+    <%= form.text_field :name, class: 'col' %>
+  </div>
+
+  <div class="field row">
+    <%= form.label :last_name, class: 'col-2' %>
+    <%= form.text_field :last_name, class: 'col' %>
+  </div>
+
+  <div class="field row">
+    <%= form.label :email, class: 'col-2' %>
+    <%= form.text_field :email, type: 'email', class: 'col' %>
+  </div>
+
+  <div class="field row">
+    <%= form.label :phone, class: 'col-2' %>
+    <%= form.text_field :phone, type: 'tel', class: 'col' %>
+  </div>
+
+  <div class="field row">
+    <%= form.label :city, class: 'col-2' %>
+    <%= form.text_field :city, class: 'col' %>
+  </div>
+
+  <div class="field row">
+    <%= form.label :stock, class: 'col-2' %>
+    <%= form.text_field :stock, class: 'col' %>
+  </div>
+
+  <h2 id="show-cost" class="field row">Cost of goods 220$ (<%= 220 * $exchange_rates[:usd].to_d %>) </h2>
+
+  <% if order.errors.any? %>
+    <div id="error_explanation row" style="color: red">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% order.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+
+  <div class="action">
+    <%= form.submit class: "btn btn-success" %>
+  </div>
+<% end %>

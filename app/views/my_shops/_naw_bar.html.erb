@@ -16,8 +16,8 @@
       <li class="nav-item <%= 'active' if current_page?(contacts_path) %>">
         <%= link_to 'Contacts', contacts_path, class: 'nav-link' %>
       </li>
-      <li class="nav-item <%= 'active' if current_page?(order_goods_path) %>">
-        <%= link_to 'Order goods', order_goods_path, class: 'nav-link' %>
+      <li class="nav-item <%= 'active' if current_page?(new_order_path) %>">
+        <%= link_to 'Order goods', new_order_path, class: 'nav-link' %>
         </li>
       <li class="nav-item <%= 'active' if current_page?(payment_delivery_path) %>">
         <%= link_to 'Payment / Delivery', payment_delivery_path, class: 'nav-link' %>
