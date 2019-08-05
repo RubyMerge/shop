@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :orders
 
   post 'orders/cost_calculation', to: 'orders#cost_calculation'
+  post 'orders/return_city', to: 'orders#return_city'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 

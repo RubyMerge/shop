@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/kukareka/novaposhta2.git
+  revision: 7099dfd71d1d2a330e105e0a38140997dfd23f39
+  specs:
+    novaposhta2 (0.0.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -338,6 +344,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
+  novaposhta2!
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.3)
