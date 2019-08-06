@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Как развенуть проект
+ 1) $ git clone https://github.com/RubyMerge/shop.git
+ 2) $ bundle
+ 3) $ rails db:migrate
+ 4) $ rails s
 
-Things you may want to cover:
+Для обновления курса валют - 'rake new_exchange_rates' 
+После развёртывания на сервере добавляется в задачи rake.
 
-* Ruby version
+Для работы mailer нужно добавить две локальные переменные  - 
+1) ENV['EMAIL']
+2) ENV['PASSWORD_EMAIL']
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Для подключения к api новой почты я использовал  gem novaposhta2 чтобы ускорить время выполнения тз.
