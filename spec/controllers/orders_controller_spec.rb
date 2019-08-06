@@ -28,13 +28,9 @@ RSpec.describe OrdersController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # Order. As you add validations to Order, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
+  let(:valid_attributes) { FactoryBot.attributes_for(:order)  }
 
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
+  let(:invalid_attributes) {  FactoryBot.attributes_for(:order, email: nil) }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -97,14 +93,15 @@ RSpec.describe OrdersController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+         FactoryBot.attributes_for(:order, email: 'new@email')
       }
 
       it "updates the requested order" do
         order = Order.create! valid_attributes
         put :update, params: {id: order.to_param, order: new_attributes}, session: valid_session
         order.reload
-        skip("Add assertions for updated state")
+        expect(order.email).to eq('new@email')
+        expect(response).to redirect_to(order)
       end
 
       it "redirects to the order" do

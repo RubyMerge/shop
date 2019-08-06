@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe MyShopsController, type: :controller do
 
   describe '#index' do
+    let!(:exchange_rates) { FactoryBot.create(:exchange_rate, id: 1)}
     it 'assigns @data' do
       shop = FactoryBot.create(:my_shop)
       get :index
